@@ -1,15 +1,6 @@
-name: CI
-
-env:
-  # The name of the main module repository
-  main_project_module: app
-
+name: Main CI
 on:
   # Triggers the workflow on push or pull request events but only for default and protected branches
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
   workflow_dispatch:
   # The workflow will be dispatched to the default queue
@@ -47,3 +38,15 @@ jobs:
       # Run Build Project
       - name: Build gradle project
         run: ./gradlew build
+
+#      # Run Build API
+#      - name: Run Main
+#        run: ./gradlew run-build-api
+#
+#      - name: Sync Repository
+#        run: |
+#          git config user.name 'amirisback'
+#          git config user.email 'faisalamircs@gmail.com'
+#          git pull
+#          git commit -am "Update Server API"
+#          git push

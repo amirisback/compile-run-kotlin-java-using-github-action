@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.0.0"
+    kotlin("jvm") version "2.0.21"
 }
 
 group = "io.github.amirisback"
@@ -16,6 +16,15 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
 kotlin {
-    jvmToolchain(21)
+    jvmToolchain(17)
+}
+
+tasks.register ("runMainKotlin", JavaExec::class.java) {
+    description = "Compile and Run Main Kotlin"
+    classpath = sourceSets["main"].runtimeClasspath
+    // note the addition of "Kt" on the end of the class name.
+
+    mainClass.set("io.github.amirisback.MainKt")
 }

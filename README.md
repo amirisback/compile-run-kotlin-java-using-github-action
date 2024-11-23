@@ -12,6 +12,7 @@
 ### Step 1 : Create task on build.gradle.kts
 - Create Task and Register to build.gradle.kts like below
 - Sample Task Name : runMainKotlin
+- Detail [Click Here](https://github.com/amirisback/compile-run-kotlin-java-using-github-action/blob/master/build.gradle.kts)
 ```kts
 tasks.register ("runMainKotlin", JavaExec::class.java) {
     description = "Compile and Run Main Kotlin"
@@ -26,13 +27,14 @@ tasks.register ("runMainKotlin", JavaExec::class.java) {
 ### Step 2 : Add to CI.yml
 - Call the function that has been created in the build.gradle.kts file
 - Sample Function : runMainKotlin
+- Detail [Click Here](https://github.com/amirisback/compile-run-kotlin-java-using-github-action/blob/master/.github/workflows/ci.yml)
 ```yml
 # Run main using gradle
 - name: Run Main
   run: ./gradlew runMainKotlin
 ```
 
-## Step 3 : Run On Github Action
+### Step 3 : Run On Github Action
 - Open Github Action On Github
 
 ![ss](docs/image/ss-2.png?raw=true)

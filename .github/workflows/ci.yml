@@ -39,6 +39,6 @@ jobs:
       - name: Build gradle project
         run: ./gradlew build
 
-      # Run Build API
+      # Run main using gradle
       - name: Run Main
         run: ./gradlew runMainKotlin

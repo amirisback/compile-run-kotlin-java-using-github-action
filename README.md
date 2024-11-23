@@ -1,6 +1,10 @@
 ## Compile and Run Kotlin / Java Using Github Action 
 [![Main CI](https://github.com/amirisback/compile-run-kotlin-java-using-github-action/actions/workflows/ci.yml/badge.svg)](https://github.com/amirisback/compile-run-kotlin-java-using-github-action/actions/workflows/ci.yml)
 
+### Tools
+- Intellij IDEA
+- Kotlin v 1.8.0
+
 ## Screen Shot
 ![ss](docs/image/ss-1.png?raw=true)
 
@@ -28,9 +32,10 @@ tasks.register ("runMainKotlin", JavaExec::class.java) {
   run: ./gradlew runMainKotlin
 ```
 
-### Tools
-- Intellij IDEA
-- Kotlin v 1.8.0
+## Step 3 : Run On Github Action
+- Open Github Action On Github
+
+![ss](docs/image/ss-2.png?raw=true)
 
 ## Colaborator
 Very open to anyone, I'll write your name under this, please contribute by sending an email to me
